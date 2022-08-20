@@ -1,26 +1,49 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <ReadMoreSection 
+    headerText="Explore"
+    ctaText="More Details"
+    v-if="!isLoading"
+  />
+  <LoadingScreen v-if="isLoading" :class="{'fade-out': addAnimation}"></LoadingScreen>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+  import ReadMoreSection from './components/ReadMoreSection.vue'
+  import LoadingScreen from "./components/screens/LoadingScreen"
 
-export default {
-  name: 'App',
-  components: {
-    HelloWorld
+  export default {
+    name: 'App',
+    components: {
+      ReadMoreSection,
+      LoadingScreen
+    },
+    data() {
+      return {
+        isLoading: true,
+        addAnimation: false
+      }
+    },
+    mounted() {
+      setTimeout(() => {
+        this.addAnimation = true;
+      }, 2000);
+
+      setTimeout(() => {
+        this.isLoading = false;
+      }, 3000);
+    }
   }
-}
 </script>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+<style lang="scss">
+  @import "./assets/styles/variables.scss";
+
+  #app {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-align: center;
+    color: $primary-color;
+    margin: 0;
+    overflow: hidden;
+  }
 </style>

@@ -1,0 +1,133 @@
+@font-face {
+    font-family: "Didot";
+    src: local("Didot"),
+    url(../../assets/fonts/Didot/Didot-Regular.ttf) format("truetype");
+  }
+  
+@font-face {
+    font-family: "Lato";
+    src: local("Lato"),
+    url(../../assets/fonts/Lato/Lato-Regular.ttf) format("truetype");
+}
+
+
+/* General Site Styles */
+
+html, 
+body {
+    overflow-x: hidden;
+    width: 100vw;
+}
+
+html {
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+
+* {
+    -moz-osx-font-smoothing: grayscale;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  word-wrap: break-word;
+  text-rendering: optimizeLegibility;
+  min-height: 100vh;
+}
+
+
+/* Animations */
+
+.fade-in-up {
+    animation: fadeInUp 1.5s;
+}
+
+@keyframes fadeInUp {
+    0% { 
+        opacity: 0; 
+        margin-bottom: -35%;
+    }
+    25% { 
+        opacity: 0; 
+        margin-bottom: -20%;
+    }
+    75% { 
+        opacity: 0; 
+        margin-bottom: -5%;
+    }
+    100% { 
+        opacity: 1; 
+        margin-bottom: 0;
+    }
+}
+
+.fade-in-left {
+    animation: fadeInLeft 1.5s;
+}
+
+@keyframes fadeInLeft {
+    0% { 
+        opacity: 0; 
+        margin-left: -35%;
+    }
+    25% { 
+        opacity: 0; 
+        margin-left: -20%;
+    }
+    75% { 
+        opacity: 0; 
+        margin-left: -5%;
+    }
+    100% { 
+        opacity: 1; 
+        margin-left: 0;
+    }
+}
+
+.fade-in-right {
+    animation: fadeInright 1.5s;
+}
+
+@keyframes fadeInright {
+    0% { 
+        opacity: 0; 
+        margin-right: -35%;
+    }
+    25% { 
+        opacity: 0; 
+        margin-right: -20%;
+    }
+    75% { 
+        opacity: 0; 
+        margin-right: -5%;
+    }
+    100% { 
+        opacity: 1; 
+        margin-right: 0;
+    }
+}
+
+.fade-out {
+    animation: fadeOut 1s;
+}
+
+@keyframes fadeOut {
+    0% { 
+        opacity: 1;
+    }
+    25% { 
+        opacity: 0.5; 
+    }
+    75% { 
+        opacity: 0.1; 
+    }
+    100% { 
+        opacity: 0; 
+    }
+}
