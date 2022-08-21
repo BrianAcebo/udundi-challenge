@@ -135,7 +135,7 @@
         }
 
         .divider {
-            background: linear-gradient(to right, $primary-color, $secondary-color#fff);
+            background: linear-gradient(to right, $primary-color, $secondary-color);
             width: 275px;
             height: 2px;
             margin-bottom: 25px;
@@ -209,6 +209,11 @@
                 font-size: 35px;
                 line-height: 50px;
                 margin-bottom: 10px;
+            }
+
+            .divider {
+                width: 150px;
+                height: 2px;
             }
 
             p {

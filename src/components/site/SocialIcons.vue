@@ -40,4 +40,11 @@
             margin: 0 0 20px 0;
         }
     }
+
+    @media screen and (max-width: 796px) {
+        .social-icons-container {
+            right: 25px;
+            bottom: 10%;
+        }
+    }
 </style>

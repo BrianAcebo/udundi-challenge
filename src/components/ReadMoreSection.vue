@@ -100,8 +100,8 @@
 
   @media screen and (max-width: 796px) {
     .section-text {
-      left: 35px;
-      padding-right: 35px;
+      left: auto;
+      padding: 0 50px;
       top: 25%;
 
       &.btm-expand {
@@ -118,9 +118,14 @@
 
   @media screen and (max-width: 595px) {
     .section-text {
-      left: 0;
-      padding: 0 35px;
+      left: auto;
+      padding: 25px 15px;
       top: 25%;
+      height: 100vh;
+
+      &.btm-expand {
+        top: 0;
+      }
     }
   }
 </style>
